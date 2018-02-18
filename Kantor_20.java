@@ -14,6 +14,7 @@ public class Kantor_20 {
     
     public static void main(String[] args) throws IOException 
     {
+        //WPROWADZENIE WARTOŚCI
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         System.out.println("Wprowadź wartość do obliczeń:");
@@ -25,6 +26,9 @@ public class Kantor_20 {
         System.out.println("Wprowadź waluta2 ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         waluta2 = br.readLine();
         
+        //ZMIANA WARTOŚCI NA MAŁE ZNAKI       
+        waluta1 = waluta1.replaceAll("[^a-zA-Z]+","").toLowerCase();
+        waluta2 = waluta2.replaceAll("[^a-zA-Z]+","").toLowerCase();
         
         System.out.println("a:"+wartosc1 +" waluta1:"+waluta1+" waluta2:"+waluta2);
         
