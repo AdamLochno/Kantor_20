@@ -35,7 +35,8 @@ public class Kantor_20 {
         Obliczenia kantor= new Obliczenia();
         kantor.obliczenia();
         kantor.wyswietlWynik();
-        
+        PullData pulldata = new PullData();
+        pulldata.getRateDollar();
     }
     
 }
