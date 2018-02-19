@@ -12,10 +12,11 @@ import java.net.URLConnection;
 public class PullData 
 
 {
-
+double ValueEuro;
+  
+    
   public void getRateEuro() throws MalformedURLException, IOException
-  {
-      
+  {       
       URL urlEuro = new URL ("http://api.nbp.pl/api/exchangerates/rates/A/eur/?format=JSON");
       URLConnection con = urlEuro.openConnection();
         InputStream is =con.getInputStream();
@@ -28,10 +29,16 @@ public class PullData
         {
             String numbers = line.substring(line.length() - 9);//WZIĘCIE OSTATNICH 9 ZNAKÓW
             numbers = numbers.substring(0, numbers.length() - 3);//USUNIĘCIE 3 OSTATNICH ZNAKÓW - NAWIASY
-            double value = Double.parseDouble(numbers);            
-            System.out.println("EURO: "+value);
+            double valueEuro = Double.parseDouble(numbers);            
+            System.out.println("EURO: "+valueEuro);
+            ValueEuro=valueEuro;
         }
   }
+  public void Druk()
+  {
+      System.out.println(ValueEuro);
+  }
+  
     public void getRateDollar() throws MalformedURLException, IOException
   {
       URL urlDollar = new URL ("http://api.nbp.pl/api/exchangerates/rates/A/usd/?format=JSON");
@@ -46,13 +53,13 @@ public class PullData
         {
             String numbers = line.substring(line.length() - 9);//WZIĘCIE OSTATNICH 9 ZNAKÓW
             numbers = numbers.substring(0, numbers.length() - 3);//USUNIĘCIE 3 OSTATNICH ZNAKÓW - NAWIASY
-            double value = Double.parseDouble(numbers);            
-            System.out.println("Dollar: "+value);
+            double valueDollar = Double.parseDouble(numbers);            
+            System.out.println("Dollar: "+valueDollar);
         }
   }
-      public void getRateFunt() throws MalformedURLException, IOException //TRZEBA ODWOŁANIE DO STRONY ZMIENIĆ
+      public void getRateFunt() throws MalformedURLException, IOException 
   {
-      URL urlDollar = new URL ("http://api.nbp.pl/api/exchangerates/rates/a/gbp/last/10/?format=json");
+      URL urlDollar = new URL ("http://api.nbp.pl/api/exchangerates/rates/a/gbp/?format=json");
       URLConnection con = urlDollar.openConnection();
         InputStream is =con.getInputStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
@@ -64,8 +71,8 @@ public class PullData
         {
             String numbers = line.substring(line.length() - 9);//WZIĘCIE OSTATNICH 9 ZNAKÓW
             numbers = numbers.substring(0, numbers.length() - 3);//USUNIĘCIE 3 OSTATNICH ZNAKÓW - NAWIASY
-            double value = Double.parseDouble(numbers);            
-            System.out.println("Funt: "+value);
+            double valueFunt = Double.parseDouble(numbers);            
+            System.out.println("Funt: "+valueFunt);
         }
   }
         public void getRateFrank() throws MalformedURLException, IOException
@@ -82,12 +89,8 @@ public class PullData
         {
             String numbers = line.substring(line.length() - 9);//WZIĘCIE OSTATNICH 9 ZNAKÓW
             numbers = numbers.substring(0, numbers.length() - 3);//USUNIĘCIE 3 OSTATNICH ZNAKÓW - NAWIASY
-            double value = Double.parseDouble(numbers);
-value=value+2;            
-            System.out.println("Frank: "+value);
+            double valueFrank = Double.parseDouble(numbers);           
+            System.out.println("Frank: "+valueFrank);
         }
-  }
-    
-    
-    
+  }   
 }
