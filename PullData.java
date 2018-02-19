@@ -12,7 +12,7 @@ import java.net.URLConnection;
 public class PullData 
 
 {
-double ValueEuro;
+public double ValueEuro;
   
     
   public void getRateEuro() throws MalformedURLException, IOException
@@ -34,7 +34,7 @@ double ValueEuro;
             ValueEuro=valueEuro;
         }
   }
-  public void Druk()
+  public void Druk()    //METODA SPRAWDZAJĄCA 
   {
       System.out.println(ValueEuro);
   }
