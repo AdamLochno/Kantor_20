@@ -2,15 +2,20 @@
 package kantor_2.pkg0;
 
 
-public class Obliczenia extends Kantor_20
+public class Obliczenia extends PushData
 {
-    double wartość1=0;
+    
+    PullData pulldata = new PullData();
+    PushData pushdata = new PushData();
+    
+    
     double zloty = 1;
-    double euro =4.3;
+    double euro = 4.3;
     double dollar = 3.8;
     double funt = 4.9;
     double frankSzwajcarski = 3.6;
     double wynik=0;
+    
     public void obliczenia()
     {
         //WARTOŚĆ WEJŚCIOWA JEST W ZŁOTOWKACH
@@ -138,9 +143,12 @@ public class Obliczenia extends Kantor_20
             wynik=wartosc1/frankSzwajcarski;
             }           
         }
+        
     }
     public void wyswietlWynik()
     {
         System.out.println("Wynikiem jest: " + wynik);
     }
+    
+    
 }
