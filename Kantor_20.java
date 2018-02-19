@@ -35,8 +35,11 @@ public class Kantor_20 {
         Obliczenia kantor= new Obliczenia();
         kantor.obliczenia();
         kantor.wyswietlWynik();
-        PullData pulldata = new PullData();
+        PullData pulldata = new PullData();        
+        pulldata.getRateEuro();
         pulldata.getRateDollar();
+        pulldata.getRateFunt();
+        pulldata.getRateFrank();
     }
     
 }

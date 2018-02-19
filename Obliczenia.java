@@ -37,10 +37,7 @@ public class Obliczenia extends Kantor_20
                 wynik=wartosc1/frankSzwajcarski;
             }            
         }
-        else
-                {
-                    System.out.println("Błędna wartość");
-                }
+        
         //WARTOŚĆ WEJŚCIOWA JEST W EURO
         if ("euro".equals(waluta1))
         {
