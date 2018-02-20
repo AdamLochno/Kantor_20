@@ -33,10 +33,4 @@ public class PushData
         
         System.out.println("a:"+wartosc1 +" waluta1:"+waluta1+" waluta2:"+waluta2);   
     }
-    public void getPushData()
-    {
-        this.waluta1=waluta1;
-        this.waluta2=waluta2;
-        this.wartosc1=wartosc1;
-    }
 }
