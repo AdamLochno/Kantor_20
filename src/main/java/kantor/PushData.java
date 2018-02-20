@@ -14,9 +14,6 @@ public class PushData {
     public void PushData() throws IOException {
         reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Wybierz walutę docelową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
-        waluta2 = reader.readLine();
-
         //ZMIANA WARTOŚCI NA MAŁE ZNAKI       
         waluta1 = waluta1.replaceAll("[^a-zA-Z]+", "").toLowerCase();
         waluta2 = waluta2.replaceAll("[^a-zA-Z]+", "").toLowerCase();
@@ -31,6 +28,11 @@ public class PushData {
 
     public String getInitialCurrency() {
         System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
+        return readLine();
+    }
+
+    public String getTargetCurrency() {
+        System.out.println("Wybierz walutę docelową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         return readLine();
     }
 
