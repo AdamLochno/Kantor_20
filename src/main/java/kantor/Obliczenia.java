@@ -1,5 +1,5 @@
 
-package kantor_2.pkg0;
+package kantor;
 
 
 public class Obliczenia extends PushData
