@@ -4,7 +4,7 @@ package kantor;
 import java.io.IOException;
 
 
-public class Kantor_20 {
+public class Kantor {
     public int wartosc1;
     public String waluta1, waluta2;
 
