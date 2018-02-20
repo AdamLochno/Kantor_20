@@ -11,14 +11,8 @@ public class PushData {
     public String waluta1, waluta2;
     private BufferedReader reader;
 
-    public void PushData() throws IOException {
+    public void PushData() {
         reader = new BufferedReader(new InputStreamReader(System.in));
-
-        //ZMIANA WARTOŚCI NA MAŁE ZNAKI       
-        waluta1 = waluta1.replaceAll("[^a-zA-Z]+", "").toLowerCase();
-        waluta2 = waluta2.replaceAll("[^a-zA-Z]+", "").toLowerCase();
-
-        System.out.println("a:" + wartosc1 + " waluta1:" + waluta1 + " waluta2:" + waluta2);
     }
 
     public int getAmount() {
