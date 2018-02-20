@@ -31,10 +31,15 @@ public class PushData {
 
     public int getAmount() {
         System.out.println("Wprowadź wartość do obliczeń:");
+        return Integer.parseInt(readLine());
+    }
+
+    private String readLine() {
         try {
-            return Integer.parseInt(reader.readLine());
+            return reader.readLine();
         } catch (IOException e) {
-            return getAmount();
+            System.out.println("nie poprawne wejście, spróbuj ponownie");
+            return readLine();
         }
     }
 }
