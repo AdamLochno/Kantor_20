@@ -14,8 +14,7 @@ public class PushData {
     public void PushData() throws IOException {
         reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Wprowadź wartość do obliczeń:");
-        wartosc1 = Integer.parseInt(reader.readLine());
+
 
         System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         waluta1 = reader.readLine();
@@ -28,5 +27,14 @@ public class PushData {
         waluta2 = waluta2.replaceAll("[^a-zA-Z]+", "").toLowerCase();
 
         System.out.println("a:" + wartosc1 + " waluta1:" + waluta1 + " waluta2:" + waluta2);
+    }
+
+    public int getAmount() {
+        System.out.println("Wprowadź wartość do obliczeń:");
+        try {
+            return Integer.parseInt(reader.readLine());
+        } catch (IOException e) {
+            return getAmount();
+        }
     }
 }
