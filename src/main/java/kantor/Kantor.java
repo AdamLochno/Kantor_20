@@ -1,17 +1,14 @@
 
 package kantor;
 
-import java.io.IOException;
-
-
 public class Kantor {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Kantor kantor = new Kantor();
         kantor.run();
     }
 
-    private void run() throws IOException {
+    private void run() {
 
         Obliczenia kantor = new Obliczenia(new UserInput());
         kantor.obliczenia();
