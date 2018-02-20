@@ -12,20 +12,11 @@ public class Kantor {
     }
 
     private void run() throws IOException {
-        PushData pushdata = new PushData();
-        pushdata.PushData();
-
-        PullData pulldata = new PullData();
-        pulldata.getRateEuro();
-        pulldata.getRateDollar();
-        pulldata.getRateFunt();
-        pulldata.getRateFrank();
-        pulldata.Druk();
 
         Obliczenia kantor = new Obliczenia();
+        kantor.PushData();
         kantor.obliczenia();
-
         kantor.wyswietlWynik();
-    }
 
+    }
 }
