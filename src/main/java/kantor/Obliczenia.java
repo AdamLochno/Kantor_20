@@ -3,23 +3,18 @@ package kantor;
 
 
 public class Obliczenia {
-    private UserInput userInput;
+    private double zloty = 1;
+    private double euro = 4.3;
+    private double dollar = 3.8;
+    private double funt = 4.9;
+    private double frankSzwajcarski = 3.6;
 
-    public Obliczenia(UserInput userInput) {
-        this.userInput = userInput;
+    public double oblicz(UserInput userInput) {
+        return oblicz(userInput.getAmount(), userInput.getInitialCurrency(), userInput.getTargetCurrency());
     }
 
-    double zloty = 1;
-    double euro = 4.3;
-    double dollar = 3.8;
-    double funt = 4.9;
-    double frankSzwajcarski = 3.6;
-    double wynik = 0;
-
-    public void obliczenia() {
-        int wartosc1 = userInput.getAmount();
-        String waluta1 = userInput.getInitialCurrency();
-        String waluta2 = userInput.getTargetCurrency();
+    public double oblicz(int wartosc1, String waluta1, String waluta2) {
+        double wynik = 0;
         if ("zloty".equals(waluta1)) {
             if ("zloty".equals(waluta2)) {
                 wynik = wartosc1 / zloty;
@@ -114,12 +109,6 @@ public class Obliczenia {
                 wynik = wartosc1 / frankSzwajcarski;
             }
         }
-
+        return wynik;
     }
-
-    public void wyswietlWynik() {
-        System.out.println("Wynikiem jest: " + wynik);
-    }
-
-
 }

@@ -9,10 +9,8 @@ public class Kantor {
     }
 
     private void run() {
-
-        Obliczenia kantor = new Obliczenia(new UserInput());
-        kantor.obliczenia();
-        kantor.wyswietlWynik();
-
+        Obliczenia kantor = new Obliczenia();
+        double result = kantor.oblicz(new UserInput());
+        System.out.println(result);
     }
 }
