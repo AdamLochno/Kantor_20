@@ -14,11 +14,6 @@ public class PushData {
     public void PushData() throws IOException {
         reader = new BufferedReader(new InputStreamReader(System.in));
 
-
-
-        System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
-        waluta1 = reader.readLine();
-
         System.out.println("Wybierz walutę docelową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         waluta2 = reader.readLine();
 
@@ -32,6 +27,11 @@ public class PushData {
     public int getAmount() {
         System.out.println("Wprowadź wartość do obliczeń:");
         return Integer.parseInt(readLine());
+    }
+
+    public String getInitialCurrency() {
+        System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
+        return readLine();
     }
 
     private String readLine() {
