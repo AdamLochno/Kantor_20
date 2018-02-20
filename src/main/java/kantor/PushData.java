@@ -21,10 +21,10 @@ public class PushData
         System.out.println("Wprowadź wartość do obliczeń:");
         wartosc1 = Integer.parseInt(br.readLine());
         
-        System.out.println("Wprowadź waluta1 ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
+        System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         waluta1 = br.readLine();
         
-        System.out.println("Wprowadź waluta2 ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
+        System.out.println("Wybierz walutę docelową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         waluta2 = br.readLine();
         
         //ZMIANA WARTOŚCI NA MAŁE ZNAKI       
