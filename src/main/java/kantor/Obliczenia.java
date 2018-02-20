@@ -2,13 +2,7 @@
 package kantor;
 
 
-public class Obliczenia extends PushData
-{
-    
-    PullData pulldata = new PullData();
-    PushData pushdata = new PushData();
-    
-    
+public class Obliczenia extends PushData {
     double zloty = 1;
     double euro = 4.3;
     double dollar = 3.8;
