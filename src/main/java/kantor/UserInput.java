@@ -22,12 +22,12 @@ public class UserInput {
 
     public String getInitialCurrency() {
         System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
-        return readLine();
+        return readLine().toLowerCase();
     }
 
     public String getTargetCurrency() {
         System.out.println("Wybierz walutę docelową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
-        return readLine();
+        return readLine().toLowerCase();
     }
 
     private String readLine() {

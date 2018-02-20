@@ -13,8 +13,7 @@ public class Kantor {
 
     private void run() throws IOException {
 
-        Obliczenia kantor = new Obliczenia();
-        kantor.PushData();
+        Obliczenia kantor = new Obliczenia(new UserInput());
         kantor.obliczenia();
         kantor.wyswietlWynik();
 
