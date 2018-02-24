@@ -2,18 +2,27 @@
 package kantor;
 
 
-public class Obliczenia {
+public class Obliczenia 
+{
     private double zloty = 1;
     private double euro = 4.3;
     private double dollar = 3.8;
     private double funt = 4.9;
     private double frankSzwajcarski = 3.6;
 
-    public double oblicz(UserInput userInput) {
+    public double oblicz(UserInput userInput) 
+    {
         return oblicz(userInput.getAmount(), userInput.getInitialCurrency(), userInput.getTargetCurrency());
-    }
+    }   
+    
+   public double TakeData(PullData pullData)
+   {
+      //PullData pullData = new PullData();
+      return TakeData (pullData.getRateEuro());
+   }
 
-    public double oblicz(int wartosc1, String waluta1, String waluta2) {
+    public double oblicz(int wartosc1, String waluta1, String waluta2) 
+    {
         double wynik = 0;
         if ("zloty".equals(waluta1)) {
             if ("zloty".equals(waluta2)) {

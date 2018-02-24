@@ -6,34 +6,43 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class UserInput {
+public class UserInput 
+{
     public int wartosc1;
     public String waluta1, waluta2;
     private BufferedReader reader;
 
-    public UserInput() {
+    public UserInput() 
+    {
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
-    public int getAmount() {
+    public int getAmount() 
+    {
         System.out.println("Wprowadź wartość do obliczeń:");
         return Integer.parseInt(readLine());
     }
 
-    public String getInitialCurrency() {
+    public String getInitialCurrency() 
+    {
         System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         return readLine().toLowerCase();
     }
 
-    public String getTargetCurrency() {
+    public String getTargetCurrency() 
+    {
         System.out.println("Wybierz walutę docelową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
         return readLine().toLowerCase();
     }
 
-    private String readLine() {
-        try {
+    private String readLine() 
+    {
+        try 
+        {
             return reader.readLine();
-        } catch (IOException e) {
+        } 
+        catch (IOException e) 
+        {
             System.out.println("nie poprawne wejście, spróbuj ponownie");
             return readLine();
         }
