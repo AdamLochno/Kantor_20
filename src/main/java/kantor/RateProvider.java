@@ -32,11 +32,11 @@ public class RateProvider {
                 target.getCurrencyCode()
         );
         HttpGet request = new HttpGet(url);
-        String json = handle(request);
-        return extract(json);
+        String response = execute(request);
+        return process(response);
     }
 
-    private String handle(HttpGet request) {
+    private String execute(HttpGet request) {
         try {
             InputStream content = httpClient.execute(request)
                     .getEntity()
@@ -49,7 +49,7 @@ public class RateProvider {
         }
     }
 
-    private BigDecimal extract(String responseBody) {
+    private BigDecimal process(String responseBody) {
         return new JSONObject(responseBody)
                 .getJSONArray("rates")
                 .getJSONObject(0)
