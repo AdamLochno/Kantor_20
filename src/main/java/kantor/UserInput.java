@@ -7,8 +7,6 @@ import java.io.InputStreamReader;
 
 
 public class UserInput {
-    public int wartosc1;
-    public String waluta1, waluta2;
     private BufferedReader reader;
 
     public UserInput() {
