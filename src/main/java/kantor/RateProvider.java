@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class PullData {
+public class RateProvider {
     public double ValueEuro;
 
 
