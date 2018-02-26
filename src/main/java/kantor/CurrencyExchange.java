@@ -1,11 +1,11 @@
 
 package kantor;
 
-public class Kantor {
+public class CurrencyExchange {
 
     public static void main(String[] args) {
-        Kantor kantor = new Kantor();
-        kantor.run();
+        CurrencyExchange currencyExchange = new CurrencyExchange();
+        currencyExchange.run();
     }
 
     private void run() {
