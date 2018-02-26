@@ -1,6 +1,11 @@
 
 package kantor;
 
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.HttpClients;
+
+import java.math.BigDecimal;
+
 public class CurrencyExchange {
 
     public static void main(String[] args) {
@@ -9,8 +14,10 @@ public class CurrencyExchange {
     }
 
     private void run() {
-        Obliczenia kantor = new Obliczenia();
-        double result = kantor.oblicz(new UserInput());
+        HttpClient httpClient = HttpClients.createDefault();
+        RateProvider rateProvider = new RateProvider(httpClient);
+        Calculator calculator = new Calculator(rateProvider);
+        BigDecimal result = calculator.handle(new UserInput());
         System.out.println(result);
     }
 }

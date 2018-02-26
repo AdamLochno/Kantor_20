@@ -4,28 +4,32 @@ package kantor;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.util.Currency;
 
 
 public class UserInput {
     private BufferedReader reader;
 
+    private final String CURRENCIES = "PLN, USD, EUR";
+
     public UserInput() {
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
-    public int getAmount() {
+    public BigDecimal getAmount() {
         System.out.println("Wprowadź wartość do obliczeń:");
-        return Integer.parseInt(readLine());
+        return new BigDecimal(readLine());
     }
 
-    public String getInitialCurrency() {
-        System.out.println("Wybierz walutę początkową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
-        return readLine().toLowerCase();
+    public Currency getInitialCurrency() {
+        System.out.println("Wybierz walutę początkową: " + CURRENCIES);
+        return Currency.getInstance(readLine());
     }
 
-    public String getTargetCurrency() {
-        System.out.println("Wybierz walutę docelową ZLOTY,EURO,DOLLAR,FUNT,FRANK:");
-        return readLine().toLowerCase();
+    public Currency getTargetCurrency() {
+        System.out.println("Wybierz walutę: " + CURRENCIES);
+        return Currency.getInstance(readLine());
     }
 
     private String readLine() {
