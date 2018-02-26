@@ -31,10 +31,6 @@ public class RateProvider {
         }
     }
 
-    public void Druk() {   //METODA SPRAWDZAJĄCA
-        System.out.println(ValueEuro);
-    }
-
     public void getRateDollar() throws MalformedURLException, IOException {
         URL urlDollar = new URL("http://api.nbp.pl/api/exchangerates/rates/A/usd/?format=JSON");
         URLConnection con = urlDollar.openConnection();
