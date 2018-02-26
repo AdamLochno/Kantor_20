@@ -20,14 +20,17 @@ public class PullData
       InputStream is =con.getInputStream();
       BufferedReader br = new BufferedReader(new InputStreamReader(is));
       String line = null;  
-        
+      
+      while ((line = br.readLine()) !=null){
       String numbers = line.substring(line.length() - 9);//WZIĘCIE OSTATNICH 9 ZNAKÓW
       numbers = numbers.substring(0, numbers.length() - 3);//USUNIĘCIE 3 OSTATNICH ZNAKÓW - NAWIASY
       double valueEuro = Double.parseDouble(numbers);            
       System.out.println("EURO: "+valueEuro); 
-      return valueEuro;        
+             
+  }      
+      return valueEuro; //BRAK DOSTĘPU DO TEJ ZMIENNEJ
+       
   }
-  
   public void Druk()    //METODA SPRAWDZAJĄCA 
   {      
       
